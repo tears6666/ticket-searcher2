@@ -1,0 +1,46 @@
+@mixin ListItem() {
+	background-color: #e8ebf2;
+	width: 240px;
+	text-align: center;
+	border: 1px solid #4e148c;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 60px;
+	font-weight: 700;
+	font-size: 16px;
+	color: #4e148c;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+@mixin ListItemHover() {
+	color: #f7f9f7;
+	background-color: #4e148c;
+}
+.nav {
+	display: flex;
+	justify-content: center;
+	.nav__list {
+		display: flex;
+		.list__item {
+			@include ListItem();
+		}
+		.list__item:hover {
+			@include ListItemHover();
+		}
+		.list__item_first {
+			@include ListItem();
+			border-radius: 10px 0 0 10px;
+		}
+		.list__item_first:hover {
+			@include ListItemHover();
+		}
+		.list__item_second {
+			@include ListItem();
+			border-radius: 0 10px 10px 0;
+		}
+		.list__item_second:hover {
+			@include ListItemHover();
+		}
+	}
+}
