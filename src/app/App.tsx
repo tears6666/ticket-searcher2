@@ -1,11 +1,10 @@
-import Header from '../widgets/header/Header'
-import Nav from '../widgets/nav/Nav'
+import { Route, Routes } from 'react-router-dom'
+import { Layout } from './layout/Layout'
 
 export default function App() {
 	return (
-		<>
-			<Header />
-			<Nav />
-		</>
+		<Routes>
+			<Route path='/' element={<Layout />}></Route>
+		</Routes>
 	)
 }

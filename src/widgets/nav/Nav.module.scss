@@ -13,10 +13,6 @@
 	transition: all 0.3s ease;
 	cursor: pointer;
 }
-@mixin ListItemHover() {
-	color: #f7f9f7;
-	background-color: #4e148c;
-}
 .nav {
 	display: flex;
 	justify-content: center;
@@ -25,22 +21,30 @@
 		.list__item {
 			@include ListItem();
 		}
-		.list__item:hover {
-			@include ListItemHover();
+		.list__item_active {
+			@include ListItem();
+			background-color: #4e148c;
+			color: #f7f9f7;
 		}
 		.list__item_first {
 			@include ListItem();
 			border-radius: 10px 0 0 10px;
 		}
-		.list__item_first:hover {
-			@include ListItemHover();
+		.list__item_first_active {
+			@include ListItem();
+			border-radius: 10px 0 0 10px;
+			background-color: #4e148c;
+			color: #f7f9f7;
 		}
 		.list__item_second {
 			@include ListItem();
 			border-radius: 0 10px 10px 0;
 		}
-		.list__item_second:hover {
-			@include ListItemHover();
+		.list__item_second_active {
+			@include ListItem();
+			background-color: #4e148c;
+			border-radius: 0 10px 10px 0;
+			color: #f7f9f7;
 		}
 	}
 }
